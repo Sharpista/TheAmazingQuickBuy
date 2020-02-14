@@ -1,6 +1,6 @@
 ﻿namespace TheAmazingQuickBuy.Domain.Entities
 {
-    class Product : EnitiyBase
+    public class Product : EnitiyBase
     {
         public string Name { get; set; }
         public string Description { get; set; }

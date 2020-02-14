@@ -5,7 +5,7 @@ using TheAmazingQuickBuy.Domain.ObjectValue.Enums;
 
 namespace TheAmazingQuickBuy.Domain.ObjectValue
 {
-    class FormOfPayment
+    public class FormOfPayment
     {
         public int Id { get; set; }
         public string Name { get; set; }

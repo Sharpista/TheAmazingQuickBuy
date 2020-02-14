@@ -2,7 +2,7 @@
 
 namespace TheAmazingQuickBuy.Domain.Entities
 {
-    class User : EnitiyBase
+    public class User : EnitiyBase
     {
         public string Name { get; set; }
         public string Email { get; set; }

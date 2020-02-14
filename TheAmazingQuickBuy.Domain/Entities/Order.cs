@@ -5,7 +5,7 @@ using TheAmazingQuickBuy.Domain.ObjectValue;
 
 namespace TheAmazingQuickBuy.Domain.Entities
 {
-    class Order : EnitiyBase
+    public class Order : EnitiyBase
     {
         public DateTime DateOrder { get; set; }
         public int UserId { get; set; }
