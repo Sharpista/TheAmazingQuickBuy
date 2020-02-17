@@ -24,6 +24,10 @@ namespace TheAmazingQuickBuy.Repository.Config
                 .Property(p => p.Description)
                 .IsRequired()
                 .HasMaxLength(400);
+
+            builder
+                .HasOne(p => p.Photo);
+           
         }
     }
 }

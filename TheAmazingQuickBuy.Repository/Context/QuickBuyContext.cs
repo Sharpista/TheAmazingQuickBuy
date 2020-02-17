@@ -12,6 +12,7 @@ namespace TheAmazingQuickBuy.Repository.Context
         public DbSet<Order> Orders { get; set; }
         public DbSet <OrderItem> OrderItems{ get; set; }
         public DbSet <FormOfPayment> FormOfPayment  { get; set; }
+        public DbSet<Photo> Photos { get; set; }
         public QuickBuyContext(DbContextOptions options) : base(options)
         {
 
@@ -23,6 +24,29 @@ namespace TheAmazingQuickBuy.Repository.Context
             modelBuilder.ApplyConfiguration(new OrderConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new OrderItemConfiguration());
+            modelBuilder.ApplyConfiguration(new PhotoConfiguration());
+            
+
+            modelBuilder.Entity<FormOfPayment>().HasData(
+                new FormOfPayment()
+                {
+                    Id = 1,
+                    Description = "FORMA DE PAGAMENTO BOLETO",
+                    Name = "BOLETO"
+                },
+                new FormOfPayment()
+                {
+                    Id = 2,
+                    Description = "FORMA DE PAGAMENTO CARTAO DE CRÉDITO",
+                    Name = "CARTÃO DE CRÉDITO"
+                },
+                new FormOfPayment()
+                {
+                    Id = 3,
+                    Description = "FORMA DE PAGAMENTO DEPÓSITO",
+                    Name = "DEPÓSITO"
+                }
+                );
             base.OnModelCreating(modelBuilder);
         }
     }

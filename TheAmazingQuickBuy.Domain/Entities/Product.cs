@@ -1,8 +1,10 @@
 ﻿namespace TheAmazingQuickBuy.Domain.Entities
 {
-    public class Product : EnitiyBase
+    public class Product : EntityBase
     {
         public string Name { get; set; }
+        public virtual Photo Photo { get; set; }
+        public int PhotoId { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
 

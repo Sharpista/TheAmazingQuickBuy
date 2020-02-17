@@ -3,9 +3,9 @@ using TheAmazingQuickBuy.Domain.Interfaces.Repositories;
 
 namespace TheAmazingQuickBuy.Repository.Repositories
 {
-    public class ProductRepository : BaseRepository<Product>, IProductRepository
+    public class PhotoRepository : BaseRepository<Photo>, IPhotoRepository
     {
-        public ProductRepository()
+        public PhotoRepository()
         {
 
         }

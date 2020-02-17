@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace TheAmazingQuickBuy.Domain.Entities
 {
-    public abstract class EnitiyBase
+    public abstract class EntityBase
     {
         public int Id { get; set; }
         private List<string> _validationMessage  { get; set; }

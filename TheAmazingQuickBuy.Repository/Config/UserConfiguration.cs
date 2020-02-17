@@ -31,6 +31,11 @@ namespace TheAmazingQuickBuy.Repository.Config
             builder
                 .HasMany(u => u.Orders)
                 .WithOne(p => p.User);
+            builder
+                .HasOne(ph => ph.Photo);
+                
+                
+           
         }
     }
 }
