@@ -8,7 +8,7 @@ namespace TheAmazingQuickBuy.Domain.Entities
         public string Email { get; set; }
         public string Password { get; set; }
         public string LastName { get; set; }
-        public ICollection<Product> Products { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
 
         public override void Validate()
         {

@@ -6,7 +6,7 @@ namespace TheAmazingQuickBuy.Domain.Entities
     public abstract class EnitiyBase
     {
         public int Id { get; set; }
-        public List<string> _validationMessage  { get; set; }
+        private List<string> _validationMessage  { get; set; }
         public List<string>validationMessage
         {
             get { return _validationMessage ?? (_validationMessage = new List<string>()); }

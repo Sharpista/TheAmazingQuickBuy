@@ -9,7 +9,17 @@ namespace TheAmazingQuickBuy.Repository.Config
     {
         public void Configure(EntityTypeBuilder<OrderItem> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(i => i.Id);
+
+            builder
+                .Property(i => i.ProductId)
+                .IsRequired();
+
+            builder
+                .Property(i => i.QuantityItem)
+                .IsRequired();
+
+           
         }
     }
 }

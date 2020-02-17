@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
@@ -28,8 +27,9 @@ namespace TheAmazingQuickBuy.Web
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             var connectionString = Configuration.GetConnectionString("QuickBuyDB");
-            services.AddDbContext<QuickBuyContext>(option =>
-                                                              option.UseMySql(connectionString,
+            services.AddDbContext<QuickBuyContext>(option => option
+                                                .UseLazyLoadingProxies()
+                                                    .UseMySql(connectionString,
                                                                                 m => m.MigrationsAssembly("TheAmazingQuickBuy.Repository")));
 
             // In production, the Angular files will be served from this directory

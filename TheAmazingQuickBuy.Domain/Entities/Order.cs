@@ -9,15 +9,16 @@ namespace TheAmazingQuickBuy.Domain.Entities
     {
         public DateTime DateOrder { get; set; }
         public int UserId { get; set; }
+        public virtual User User { get; set; }
         public DateTime DateDelivered { get; set; }
         public string PostalCode { get; set; }
         public string City { get; set; }
         public string State { get; set; }
         public string FullAddress { get; set; }
         public int AddressNumber { get; set; }
-        public int FormPaymentId { get; set; }
-        public FormOfPayment FormOfPayment  { get; set; }
-        public ICollection<OrderItem> OrderItems { get; set; }
+        public int FormOfPaymentId { get; set; }
+        public virtual FormOfPayment FormOfPayment  { get; set; }
+        public virtual ICollection<OrderItem> OrderItems { get; set; }
 
         public override void Validate()
         {

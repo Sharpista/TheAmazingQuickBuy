@@ -11,6 +11,7 @@ namespace TheAmazingQuickBuy.Domain.ObjectValue
         public string Name { get; set; }
         public string Description { get; set; }
 
+     
         public bool IsBankSlip
         {
             get { return Id == (int)FormPaymentEnums.BankSlip; }
